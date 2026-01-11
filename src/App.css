@@ -1,0 +1,17 @@
+.wrapper {
+  max-width: 70rem; /* Largura máxima do site (aprox 1120px) */
+  margin: 2rem auto; /* Centraliza na tela */
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr; /* Sidebar fixa (256px) + Resto flexível (1fr) */
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Responsivo para celular: vira uma coluna só */
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}

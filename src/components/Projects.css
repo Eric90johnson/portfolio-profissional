@@ -1,0 +1,45 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo mágico */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-card:hover {
+  border-color: var(--brand-color);
+  transform: translateY(-5px); /* Efeito de levitação */
+}
+
+.project-card h3 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  flex: 1; /* Faz o texto ocupar o espaço disponível */
+}
+
+.tech-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--brand-color);
+  border: 1px solid var(--brand-color);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-top: 8px;
+}

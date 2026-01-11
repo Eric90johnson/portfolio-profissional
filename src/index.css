@@ -1,0 +1,30 @@
+:root {
+  --brand-color: #00B37E; /* Verde Neon */
+  --bg-color: #121214;    /* Fundo Dark */
+  --surface-color: #202024; /* Cartões */
+  --text-primary: #E1E1E6;
+  --text-secondary: #C4C4CC;
+  --border-color: #323238;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif; /* Fonte padrão do sistema */
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
