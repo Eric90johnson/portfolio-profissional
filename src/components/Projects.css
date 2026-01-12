@@ -1,6 +1,6 @@
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo mágico */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -14,11 +14,13 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  /* Importante: para alinhar os botões no final mesmo se o texto for curto */
+  justify-content: space-between; 
 }
 
 .project-card:hover {
   border-color: var(--brand-color);
-  transform: translateY(-5px); /* Efeito de levitação */
+  transform: translateY(-5px);
 }
 
 .project-card h3 {
@@ -30,16 +32,71 @@
   color: var(--text-secondary);
   font-size: 0.875rem;
   line-height: 1.6;
-  flex: 1; /* Faz o texto ocupar o espaço disponível */
+}
+
+.tech-row {
+  display: flex;
+  gap: 1rem;
+  color: #7c7c8a;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
 .tech-tag {
-  display: inline-block;
-  font-size: 0.75rem;
   color: var(--brand-color);
   border: 1px solid var(--brand-color);
   padding: 2px 8px;
   border-radius: 4px;
-  margin-right: 8px;
-  margin-top: 8px;
+}
+
+/* --- ESTILOS DOS NOVOS BOTÕES --- */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; /* Empurra para o fundo do cartão */
+}
+
+.card-actions a, .card-actions span {
+  flex: 1; /* Faz os botões terem o mesmo tamanho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Botão Código (Outline / Vazado) */
+.btn-github {
+  background: transparent;
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+}
+.btn-github:hover {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+/* Botão Site (Cheio / Colorido) */
+.btn-deploy {
+  background: var(--brand-color);
+  border: 1px solid var(--brand-color);
+  color: white;
+}
+.btn-deploy:hover {
+  filter: brightness(1.1);
+}
+
+/* Botão Desabilitado (Quando não tem link) */
+.btn-disabled {
+  background: #29292e;
+  border: 1px solid #323238;
+  color: #7c7c8a;
+  cursor: not-allowed;
+  opacity: 0.6;
 }

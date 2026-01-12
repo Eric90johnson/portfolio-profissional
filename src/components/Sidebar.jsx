@@ -1,4 +1,4 @@
-import { Github, Linkedin } from 'lucide-react'; // Importando da nova lib
+import { Github, Linkedin, Instagram, MessageCircle } from 'lucide-react'; // Importamos os novos
 import './Sidebar.css';
 
 export function Sidebar() {
@@ -21,15 +21,29 @@ export function Sidebar() {
       </div>
 
       <footer className="footer">
+        {/* GitHub */}
         <a href="https://github.com/Eric90johnson" target="_blank" rel="noopener noreferrer">
           <Github size={20} />
           GitHub
         </a>
         
-        {/* Agora com ícone do LinkedIn funcionando */}
+        {/* LinkedIn */}
         <a href="https://www.linkedin.com/in/ericjohnson-development-student/" target="_blank" rel="noopener noreferrer">
           <Linkedin size={20} />
           LinkedIn
+        </a>
+
+        {/* Instagram */}
+        <a href="https://www.instagram.com/eric90johnson/" target="_blank" rel="noopener noreferrer">
+          <Instagram size={20} />
+          Instagram
+        </a>
+
+        {/* WhatsApp (Link especial: wa.me/SeuNumero) */}
+        {/* Troque o 5511999999999 pelo seu número real com DDD */}
+        <a href="https://wa.me/5585998700911" target="_blank" rel="noopener noreferrer">
+          <MessageCircle size={20} />
+          WhatsApp
         </a>
       </footer>
     </aside>
