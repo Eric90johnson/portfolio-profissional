@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FolderGit2, Star, Github, Globe } from 'lucide-react'; // Ícones para os botões
+// 1. Adicionamos o ícone Calendar na importação
+import { FolderGit2, Star, Github, Globe, Calendar } from 'lucide-react'; 
 import './Projects.css';
 
 export function Projects() {
@@ -19,6 +20,12 @@ export function Projects() {
       .catch(() => setErro(true));
   }, []);
 
+  // 2. Função auxiliar para formatar a data (Ex: 2024-01-15 -> 15/01/2024)
+  function formatarData(dataISO) {
+    const data = new Date(dataISO);
+    return new Intl.DateTimeFormat('pt-BR').format(data);
+  }
+
   return (
     <section>
       <h2>Meus Projetos</h2>
@@ -28,7 +35,6 @@ export function Projects() {
       <div className="projects-grid">
         {repos.map(repo => {
           return (
-            // Mudamos de <a> para <div>, pois agora teremos botões dentro
             <div key={repo.id} className="project-card">
               
               <div className="card-header">
@@ -40,30 +46,32 @@ export function Projects() {
               
               <p>{repo.description || "Sem descrição definida"}</p>
 
+              {/* Informações Técnicas (Data e Linguagem) */}
               <div className="tech-row">
+                {/* 3. Aqui adicionamos a data de criação */}
+                <span style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.75rem', color: '#a8a8b3' }}>
+                   <Calendar size={14} /> 
+                   {formatarData(repo.created_at)}
+                </span>
+                
                 {repo.language && <span className="tech-tag">{repo.language}</span>}
+                
                 <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                   <Star size={16} /> {repo.stargazers_count}
                 </span>
               </div>
 
-              {/* RODAPÉ DO CARTÃO: Onde ficam os botões */}
               <div className="card-actions">
-                {/* Botão 1: Ver Código (Link do GitHub) */}
                 <a href={repo.html_url} target="_blank" className="btn-github">
                   <Github size={16} /> Código
                 </a>
 
-                {/* Botão 2: Ver Site (Link do Github Pages) 
-                    A API só traz isso se você tiver colocado o link no campo "Website" do repo no GitHub.
-                    Se não tiver link, o botão fica desabilitado visualmente.
-                */}
                 {repo.homepage ? (
                    <a href={repo.homepage} target="_blank" className="btn-deploy">
                      <Globe size={16} /> Site
                    </a>
                 ) : (
-                  <span className="btn-disabled" title="Adicione o link no campo Website do GitHub">
+                  <span className="btn-disabled" title="Sem link configurado">
                     <Globe size={16} /> Site OFF
                   </span>
                 )}
