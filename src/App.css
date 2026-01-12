@@ -1,17 +1,25 @@
 .wrapper {
-  max-width: 70rem; /* Largura máxima do site (aprox 1120px) */
-  margin: 2rem auto; /* Centraliza na tela */
+  max-width: 70rem;
+  margin: 2rem auto;
   padding: 0 1rem;
-
+  
   display: grid;
-  grid-template-columns: 256px 1fr; /* Sidebar fixa (256px) + Resto flexível (1fr) */
+  /* Desktop: Sidebar de 256px + Espaço flexível */
+  grid-template-columns: 256px 1fr; 
   gap: 2rem;
   align-items: flex-start;
 }
 
-/* Responsivo para celular: vira uma coluna só */
+/* --- MÁGICA DA RESPONSIVIDADE (Mobile) --- */
+/* Quando a tela for menor que 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
   .wrapper {
-    grid-template-columns: 1fr;
+    /* Muda para 1 coluna apenas */
+    grid-template-columns: 1fr; 
+  }
+  
+  /* Diminuímos as margens para aproveitar espaço */
+  html {
+    font-size: 87.5%; /* Diminui levemente a fonte geral */
   }
 }
