@@ -26,8 +26,8 @@ export function Contato() {
             <Mail className="icon" size={24} />
             <div>
               <strong>E-mail</strong>
-              <p>ericjohnson@email.com</p> {/* Coloque seu email real */}
-              <a href="mailto:ericjohnson@email.com">Enviar e-mail</a>
+              <p>eric_johnson1990@hotmail.com</p> {/*  */}
+              <a href="mailto:eric_johnson1990@hotmail.com">Enviar e-mail</a>
             </div>
           </div>
 
@@ -35,7 +35,7 @@ export function Contato() {
             <MessageCircle className="icon" size={24} />
             <div>
               <strong>WhatsApp</strong>
-              <p>(00) 00000-0000</p>
+              <p>(85) 99870-0911</p>
               <a href="https://wa.me/5500000000000" target="_blank">Conversar agora</a>
             </div>
           </div>
@@ -44,7 +44,7 @@ export function Contato() {
             <MapPin className="icon" size={24} />
             <div>
               <strong>Localização</strong>
-              <p>Brasil - Disponível para Remoto</p>
+              <p>Caucaia, Ce - Brasil - Disponível para Remoto</p>
             </div>
           </div>
 
