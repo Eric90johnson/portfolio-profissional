@@ -36,7 +36,7 @@ export function Contato() {
             <div>
               <strong>WhatsApp</strong>
               <p>(85) 99870-0911</p>
-              <a href="https://wa.me/5500000000000" target="_blank">Conversar agora</a>
+              <a href="https://wa.me/5585998700911" target="_blank">Conversar agora</a>
             </div>
           </div>
 
