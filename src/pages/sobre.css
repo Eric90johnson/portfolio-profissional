@@ -1,0 +1,63 @@
+.page-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.page-header h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--brand-color);
+  font-weight: bold;
+}
+
+.bio-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.skills-section {
+  margin-top: 3rem;
+}
+
+.skills-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--brand-color);
+  transform: translateY(-5px);
+  background: #29292e;
+}
+
+.skill-card span {
+  font-size: 2rem;
+}
+
+.skill-card strong {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
