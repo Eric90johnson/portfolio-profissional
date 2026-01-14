@@ -1,11 +1,12 @@
 .sidebar {
   background: var(--surface-color);
   border-radius: 8px;
-  overflow: hidden; /* Garante que nada saia das bordas arredondadas */
-  height: fit-content; /* A altura se ajusta ao conteúdo */
+  overflow: hidden;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Capa de fundo estilo LinkedIn */
 .cover {
   width: 100%;
   height: 72px;
@@ -16,16 +17,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: calc(0px - 1.5rem - 6px); /* Truque matemático para subir a foto */
+  margin-top: calc(0px - 1.5rem - 6px);
 }
 
 .avatar {
   width: 3rem; 
   height: 3rem;
-  border-radius: 8px; /* Quadrado arredondado (moderno) */
-  border: 4px solid var(--surface-color); /* Cria uma "borda" falsa da mesma cor do fundo */
-  outline: 2px solid var(--brand-color); /* A borda verde de verdade */
-  box-sizing: content-box; /* Garante que a borda não esmague a foto */
+  border-radius: 8px;
+  border: 4px solid var(--surface-color);
+  outline: 2px solid var(--brand-color);
+  box-sizing: content-box;
 }
 
 .profile strong {
@@ -40,28 +41,69 @@
   line-height: 1.6;
 }
 
+/* --- ESTILOS DO NOVO MENU --- */
+.nav-menu {
+  margin-top: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+/* Essa classe "active" é colocada automaticamente pelo React Router */
+.nav-link.active {
+  background: rgba(0, 179, 126, 0.1); /* Fundo verde transparente */
+  color: var(--brand-color); /* Texto verde */
+  border-left: 3px solid var(--brand-color); /* Detalhe na esquerda */
+}
+
+/* --- RODAPÉ AJUSTADO (Ícones Sociais lado a lado) --- */
 .footer {
   border-top: 1px solid var(--border-color);
   margin-top: 1.5rem;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .footer a {
   background: transparent;
-  color: var(--brand-color);
-  border: 1px solid var(--brand-color);
+  color: var(--text-secondary); /* Cinza discreto */
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  height: 50px;
-  padding: 0 1.5rem;
-  font-weight: bold;
+  width: 40px; /* Quadrado */
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   transition: 0.2s;
 }
 
 .footer a:hover {
   background: var(--brand-color);
   color: white;
+  border-color: var(--brand-color);
 }
