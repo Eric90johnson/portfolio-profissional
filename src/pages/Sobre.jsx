@@ -1,5 +1,5 @@
-import '../App.css'; // Importa estilos globais
-import './Sobre.css'; // Vamos criar esse arquivo logo em seguida
+import '../App.css';
+import './Sobre.css';
 
 export function Sobre() {
   return (
@@ -23,15 +23,10 @@ export function Sobre() {
         <h3>Minhas Habilidades</h3>
         
         <div className="skills-grid">
-          {/* Card de Habilidade */}
+          {/* Base da Web */}
           <div className="skill-card">
-            <span>⚛️</span>
-            <strong>React.js</strong>
-          </div>
-
-          <div className="skill-card">
-            <span>⚡</span>
-            <strong>Vite</strong>
+            <span>🌐</span>
+            <strong>HTML5</strong>
           </div>
 
           <div className="skill-card">
@@ -44,6 +39,24 @@ export function Sobre() {
             <strong>JavaScript</strong>
           </div>
 
+          {/* Frameworks e Libs */}
+          <div className="skill-card">
+            <span>⚛️</span>
+            <strong>React.js</strong>
+          </div>
+
+          <div className="skill-card">
+            <span>⚡</span>
+            <strong>Vite</strong>
+          </div>
+
+          {/* Back-End */}
+          <div className="skill-card">
+            <span>🟢</span>
+            <strong>Node.js</strong>
+          </div>
+
+          {/* Ferramentas */}
           <div className="skill-card">
             <span>🌳</span>
             <strong>Git / GitHub</strong>
