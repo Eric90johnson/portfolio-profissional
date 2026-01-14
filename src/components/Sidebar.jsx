@@ -54,7 +54,7 @@ export function Sidebar() {
             <Instagram size={20} />
             </a>
 
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5585998700911" target="_blank" rel="noopener noreferrer">
             <MessageCircle size={20} />
             </a>
         </div>
