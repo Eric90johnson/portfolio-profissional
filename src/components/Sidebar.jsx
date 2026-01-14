@@ -1,5 +1,6 @@
-import { Github, Linkedin, Instagram, MessageCircle, House, User, EnvelopeSimple } from 'lucide-react';
-import { NavLink } from 'react-router-dom'; // Importante: Importa o link de navegação
+// 1. CORREÇÃO: Importamos 'Mail' em vez de 'EnvelopeSimple'
+import { Github, Linkedin, Instagram, MessageCircle, House, User, Mail } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 export function Sidebar() {
@@ -21,7 +22,6 @@ export function Sidebar() {
         <span>Front-End Developer</span>
       </div>
 
-      {/* --- NOVO MENU DE NAVEGAÇÃO --- */}
       <nav className="nav-menu">
         <NavLink to="/" className="nav-link" title="Página Inicial">
           <House size={20} />
@@ -34,11 +34,11 @@ export function Sidebar() {
         </NavLink>
 
         <NavLink to="/contato" className="nav-link" title="Fale Comigo">
-          <EnvelopeSimple size={20} />
+          {/* 2. CORREÇÃO: Usamos o componente Mail aqui */}
+          <Mail size={20} />
           Contato
         </NavLink>
       </nav>
-      {/* ----------------------------- */}
 
       <footer className="footer">
         <div className="social-links">
